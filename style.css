@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+   
+}
+
+html, body {
+    height: 100%;
+}
+
+
+
+body {
+    position: relative;
+    background: url("images/overlayy.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    overflow: hidden;
+}
+
+
+
+.container {    
+    text-align: center;
+       
+}
+
+.info {
+    margin-bottom:1.5rem;
+}
+
+
+
+.info h1, p, a {
+    color: #fb0c0c;font-family: "Fredoka", sans-serif;
+}
+
+.info h1 {
+    font-size: 48px;
+    color: rgb(0, 0, 0);
+    /*outline: 5px dotted green;
+    margin-bottom: 20px;*/
+
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+}
+
+.inquiry p {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1d0101;
+}
+
+
+img {
+    border-radius: 20PX;
+    margin: 40px;
+    width: 120px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
