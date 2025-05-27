@@ -1,0 +1,73 @@
+/*------------------------------------*\
+    #Video
+\*------------------------------------*/
+.video {
+    position     : relative;
+    border-radius: 12px;
+    height       : 375px;
+    transform    : translateY(100px);
+    margin-top   : -100px;
+
+    &.video-1 {
+        position     : relative;
+        margin-bottom: 0px;
+
+        .btn-video {
+            position        : absolute;
+            bottom          : 30px;
+            left            : 30px;
+            background-color: transparent;
+            height          : auto;
+            padding         : 0;
+        }
+    }
+
+    &.video-2 {
+        transform : translateY(0);
+        margin-top: 0;
+
+        .btn-video {
+            position : absolute;
+            top      : 50%;
+            left     : 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &.video-3 {
+        height       : 525px;
+        border-radius: 8px;
+        margin-top   : 0;
+        transform    : translateY(0);
+
+        .btn-video {
+            position : absolute;
+            top      : 50%;
+            left     : 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+// Rule sets For Popup Overlay 
+.mfp-bg {
+    z-index: 1543;
+}
+
+.mfp-wrap {
+    z-index: 1642;
+}
+
+@include keyframes(pulse) {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.4);
+        opacity  : 0;
+    }
+}
+
+
+/* Custom, iPhone Retina */

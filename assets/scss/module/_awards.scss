@@ -1,0 +1,86 @@
+/*------------------------------------*\
+    #Awards
+\*------------------------------------*/
+.awards {
+    padding-top   : 130px;
+    padding-bottom: 80px;
+
+    @media #{$maxTablet} {
+        padding-top   : 70px;
+        padding-bottom: 30px;
+    }
+
+    .award {
+        margin-bottom: 30px;
+
+        &:hover {
+            .award-img {
+                background-color: var(--global--color-primary);
+            }
+        }
+
+        .award-img {
+            padding         : 42px 65px;
+            background-color: #f3f3f3;
+            border-radius   : 8px;
+            transition      : 0.3s ease-in-out;
+            display         : flex;
+            justify-content : center;
+            align-items     : center;
+
+            @media #{$noteBook} {
+                padding-left : 45px;
+                padding-right: 45px;
+            }
+
+            @media #{$maxTablet} {
+                padding-left : 40px;
+                padding-right: 40px;
+            }
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        .award-content {
+            padding: 29px 30px 12px;
+
+            @media #{$maxTablet} {
+                text-align: center;
+            }
+
+            @media #{$noteBook} {
+                padding-left : 20px;
+                padding-right: 20px;
+            }
+
+            .award-title {
+                margin-bottom: 17px;
+
+                a {
+                    font-family   : var(--global--font-heading);
+                    font-weight   : 700;
+                    font-size     : 18px;
+                    line-height   : 26px;
+                    color         : var(--global--color-secondary);
+                    transition    : 0.3s ease-in-out;
+                    text-transform: capitalize;
+
+                    &:hover {
+                        color: var(--global--color-primary);
+                    }
+                }
+            }
+
+            .award-desc {
+                font-family  : var(--global--font-body);
+                font-weight  : 400;
+                font-size    : 15px;
+                line-height  : 25px;
+                color        : var(--global--color-body);
+                margin-bottom: 0;
+            }
+        }
+    }
+}

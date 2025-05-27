@@ -1,0 +1,77 @@
+/*------------------------------------*\
+    #Blockquotes
+\*------------------------------------*/
+
+.blockquote,
+blockquote {
+    font-size  : 20px;
+    font-family: var(--global--font-heading);
+    color      : var(--global--color-body);
+    font-style : normal;
+    line-height: 28px;
+    font-weight: 500;
+    padding    : 30px 0 30px 30px;
+    position   : relative;
+    border-left: 6px solid var(--global--color-heading);
+
+    .quote-author {
+        font-family: var(--global--font-heading);
+        display    : block;
+        font-size  : 13px;
+        font-style : normal;
+        font-weight: 600;
+        line-height: 1;
+        color      : var(--global--color-heading);
+        margin-top : 18px;
+    }
+
+    .author {
+        font-family: var(--global--font-body);
+        display    : block;
+        font-size  : 18px;
+        font-style : italic;
+        font-weight: 600;
+        line-height: 1;
+        color      : var(--global--color-heading);
+        margin-top : 18px;
+    }
+}
+
+.blockquote-1 {
+    border-left: 6px solid var(--global--color-heading);
+}
+
+.blockquote-2 {
+    position   : relative;
+    border-left: none;
+
+    &::before,
+    &::after {
+        font-family: $fontawesome;
+        font-size  : 16px;
+        position   : absolute;
+        color      : var(--global--color-primary);
+        line-height: 1.8;
+        font-weight: 600;
+    }
+
+    &::before {
+        content: "\f10d";
+        top    : 0;
+        left   : 0;
+    }
+
+    &::after {
+        content: "\f10e";
+        right  : 0;
+        bottom : 0;
+    }
+}
+
+.blockquote-3 {
+    background-color: var(--global--color-heading);
+
+    .author {
+        color: var(--global--color-body);
+    }
+}

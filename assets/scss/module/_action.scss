@@ -1,0 +1,222 @@
+/*------------------------------------*\
+    #Call To Action
+\*------------------------------------*/
+.cta {
+    box-shadow      : 0px 5px 83px 0px rgba(40, 40, 40, 0.11);
+    border-radius   : 12px;
+    overflow        : hidden;
+    background-color: var(--global--color-white);
+    display         : flex;
+    align-items     : center;
+    flex-direction  : column;
+
+    @media #{$minLarge} {
+        flex-direction: row;
+        height        : 250px;
+    }
+
+    @media #{$minXlarge} {
+        height: 200px;
+    }
+
+    .cta-img {
+        position: relative;
+
+        @media #{$minLarge} {
+            flex-basis : 38%;
+            flex-shrink: 0;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .cta-icon {
+            border       : 9px solid var(--global--color-white);
+            border-radius: 50%;
+            position     : absolute;
+            bottom       : 0;
+            left         : 50%;
+            transition   : 0.3s ease-in-out;
+            transform    : translate(-50%, 50%);
+
+            @media #{$minLarge} {
+                top      : 50%;
+                left     : auto;
+                bottom   : auto;
+                transform: translate(50%, -50%);
+                right    : 0;
+            }
+
+            &:hover {
+                i {
+                    background-color: var(--global--color-heading);
+                }
+            }
+
+            i {
+                border-radius   : 50%;
+                display         : flex;
+                justify-content : center;
+                align-items     : center;
+                width           : 80px;
+                height          : 80px;
+                background-color: var(--global--color-primary);
+                color           : var(--global--color-white);
+                font-size       : 30px;
+                transition      : 0.3s ease-in-out;
+
+                @media #{$maxSmall} {
+                    width    : 50px;
+                    height   : 50px;
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+
+    .cta-body {
+        padding: 38px 50px 35px 80px;
+
+        @media #{$maxTablet} {
+            padding-top : 70px;
+            padding-left: 50px;
+        }
+
+        @media #{$maxSmall} {
+            padding-top  : 50px;
+            padding-left : 30px;
+            padding-right: 30px;
+        }
+
+        h5 {
+            font-size     : 23px;
+            margin-bottom : 20px;
+            line-height   : 1;
+            text-transform: capitalize;
+
+            @media #{$maxTablet} {
+                text-align : center;
+                line-height: 1.4;
+            }
+        }
+
+        .cta-content {
+            display       : flex;
+            align-items   : center;
+            flex-direction: column;
+
+            @media #{$minTablet} {
+                flex-direction: row;
+            }
+
+            p {
+                font-size  : 15px;
+                line-height: 25px;
+
+                @media #{$maxSmall} {
+                    text-align   : center;
+                    margin-bottom: 20px;
+                }
+            }
+
+            .btn {
+                flex-shrink : 0;
+                width       : 185px;
+                height      : 55px;
+                padding     : 0 27px;
+                border-color: rgba(37, 55, 69, 0.5);
+                color       : var(--global--color-heading);
+                transition  : 0.3s ease-in-out;
+                margin-left : 0;
+
+                i {
+                    color     : var(--global--color-heading);
+                    transition: 0.3s ease-in-out;
+                }
+
+                &::before {
+                    background-color: var(--global--color-heading);
+                }
+
+                &:hover {
+                    border-color: var(--global--color-heading);
+                    color       : var(--global--color-white);
+
+                    i {
+                        color: var(--global--color-white);
+                    }
+                }
+
+                @media #{$minTablet} {
+                    margin-left: 30px;
+                }
+
+                @media #{$minLarge} {
+                    margin-left: 50px;
+                }
+            }
+        }
+    }
+}
+
+.cta-holder {
+    overflow           : visible;
+    padding-bottom     : 70px;
+    background-position: bottom center;
+
+    @media #{$minLarge} {
+        transform            : translateY(-160px);
+        margin-bottom        : -160px;
+        padding-bottom       : 100px;
+        background-position-y: -200px;
+    }
+
+    @media #{$minXlarge} {
+        background-position-y: -400px;
+        transform            : translateY(-180px);
+        margin-bottom        : -180px;
+    }
+
+    .cta {
+        margin-bottom: 33px;
+    }
+
+    .more-actions {
+        text-align: center;
+
+        p {
+            font-family: var(--global--font-body);
+            font-weight: 700;
+            font-size  : 15px;
+            color      : var(--global--color-body);
+
+            a {
+                position      : relative;
+                font-weight   : 700;
+                color         : var(--global--color-heading);
+                transition    : 0.3s ease-in-out;
+                text-transform: capitalize;
+                padding-bottom: 6px;
+
+                &:hover {
+                    &::before {
+                        width: calc(100% - 20%);
+                    }
+                }
+
+                &::before {
+                    content         : '';
+                    transition      : 0.3s ease-in-out;
+                    position        : absolute;
+                    bottom          : 0;
+                    left            : 50%;
+                    transform       : translateX(-50%);
+                    width           : 100%;
+                    height          : 2px;
+                    background-color: var(--global--color-primary);
+                }
+            }
+        }
+    }
+}

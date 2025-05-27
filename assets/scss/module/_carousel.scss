@@ -1,0 +1,148 @@
+/*------------------------------------*\
+    #Carousel
+\*------------------------------------*/
+.owl-nav.disabled {
+    display: none;
+}
+
+.carousel-dots {
+    position: relative;
+
+    button.owl-dot,
+    button.owl-dot:focus {
+        padding         : 0;
+        background-color: transparent;
+        border          : none;
+        outline         : none;
+        box-shadow      : none;
+    }
+
+    .owl-dots {
+        display        : flex;
+        justify-content: center;
+        align-items    : flex-end;
+        z-index        : 5;
+
+        .owl-dot {
+            margin-right: 10px;
+            display     : inline-flex;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &.active {
+                span {
+                    background-color: var(--global--color-primary);
+                    height          : 6px;
+                }
+            }
+
+            span {
+                display         : inline-block;
+                width           : 35px;
+                height          : 3px;
+                border-top      : 3px solid transparent;
+                background-color: #6b7475;
+                transition      : 0.3s ease-in-out;
+                margin-right    : 0;
+                position        : relative;
+
+                @media #{$maxSmall} {
+                    width: 25px;
+                }
+            }
+        }
+    }
+
+    &.dots-side {
+        .owl-dots {
+            @media #{$minLarge} {
+                position: absolute;
+                bottom  : -17px;
+                right   : 0;
+            }
+
+            @media #{$maxTablet} {
+                margin-bottom: 35px;
+            }
+        }
+    }
+}
+
+.owl-carousel {
+    .owl-stage-outer {
+        overflow: visible;
+
+        .owl-item {
+            opacity: 0;
+
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+.carousel-navs {
+    position: relative;
+
+    .owl-nav {
+        span {
+            font-size: 0;
+        }
+
+        @media #{$minLarge} {
+            position : absolute;
+            top      : 50%;
+            transform: translateY(-50%);
+            right    : 0;
+            left     : 0;
+        }
+    }
+
+    .owl-next,
+    .owl-prev {
+        position: absolute;
+
+        &:hover {
+            &::before {
+                color: var(--global--color-primary);
+            }
+        }
+
+        &:before {
+            font-family: 'carousel';
+            font-size  : 43px;
+            font-weight: 600;
+            color      : #687596;
+            ;
+            transition: 0.3s ease-in-out;
+        }
+    }
+
+    .owl-prev {
+        left: 50px;
+
+        &:before {
+            content: "\e990";
+        }
+    }
+
+    .owl-next {
+        right: 50px;
+
+        &:before {
+            content: "\e991";
+        }
+    }
+}
+
+.carousel-navs {
+    .owl-dots {
+        position: absolute;
+        bottom  : 30px;
+        width   : 100%;
+    }
+}

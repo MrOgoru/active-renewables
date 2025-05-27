@@ -1,0 +1,163 @@
+/*------------------------------------*\
+    #Company Data
+\*------------------------------------*/
+.company-data {
+    padding-top   : 45px;
+    padding-bottom: 45px;
+    border-bottom : 1px solid #eaeaea;
+    overflow      : visible;
+
+    .data {
+        display    : flex;
+        align-items: center;
+
+        @media #{$maxSmall} {
+            margin-bottom: 15px;
+
+        }
+
+        .data-icon {
+            margin-right: 20px;
+
+            @media #{$noteBook} {
+                margin-right: 10px;
+            }
+
+            i {
+                &::before {
+                    margin-left: 0;
+                    color      : var(--global--color-primary);
+                    font-size  : 50px;
+
+                    @media #{$noteBook} {
+                        font-size: 35px;
+                    }
+                }
+            }
+        }
+
+        .data-body {
+            h6 {
+                font-family   : var(--global--font-heading);
+                font-weight   : 700;
+                font-size     : 18px;
+                line-height   : 24px;
+                color         : #282828;
+                text-transform: capitalize;
+                margin-bottom : 7px;
+            }
+
+            p,
+            a {
+                color         : var(--global--color-body);
+                transition    : 0.3s ease-in-out;
+                font-family   : var(--global--font-body);
+                font-weight   : 400;
+                font-size     : 14px;
+                line-height   : 24px;
+                text-transform: capitalize;
+            }
+
+            a {
+                &:hover {
+                    color: var(--global--color-primary);
+                }
+            }
+        }
+    }
+
+    .panels-container {
+        display      : flex;
+        margin-top   : 40px;
+        border-radius: 8px;
+        overflow     : hidden;
+
+        @media #{$minLarge} {
+            margin-top     : 0px;
+            justify-content: flex-end;
+            margin-bottom  : -126px;
+            transform      : translateY(-126px);
+            position       : relative;
+            z-index        : 1000;
+        }
+
+        @media #{$maxTablet} {
+            max-width   : 370px;
+            margin-left : auto;
+            margin-right: auto;
+        }
+
+        .panel-action {
+            background-color: var(--global--color-primary);
+            transition      : 0.3s ease-in-out;
+            padding         : 37px 30px 39px 45px;
+            display         : flex;
+            align-items     : flex-start;
+            cursor          : pointer;
+
+            @media #{$noteBook} {
+                padding-left : 20px;
+                padding-right: 20px;
+            }
+
+            @media #{$maxTablet} {
+                padding-left : 25px;
+                padding-right: 25px;
+            }
+
+            @media #{$maxSmall} {
+                flex-direction: column;
+                align-items   : center;
+                text-align    : center;
+            }
+
+            .panel-icon {
+                flex-shrink  : 0;
+                margin-bottom: 20px;
+
+                @media #{$minTablet} {
+                    margin-right : 30px;
+                    margin-bottom: 0;
+                }
+
+                @media #{$noteBook} {
+                    margin-right: 20px;
+                }
+
+                i {
+                    &::before {
+                        color      : var(--global--color-white);
+                        font-size  : 65px;
+                        margin-left: 0;
+
+                        @media #{$noteBook} {
+                            font-size: 50px;
+                        }
+                    }
+                }
+            }
+
+            .panel-content {
+                .panel-heading {
+                    font-family  : var(--global--font-heading);
+                    font-weight  : 700;
+                    font-size    : 20px;
+                    line-height  : 30px;
+                    margin-bottom: 16px;
+                    transition   : 0.3s ease-in-out;
+                    color        : var(--global--color-white);
+
+                    @media #{$noteBook} {
+                        font-size: 18px;
+                    }
+                }
+
+                .panel-desc {
+                    font-size  : 15px;
+                    line-height: 24px;
+                    color      : var(--global--color-gray);
+                }
+            }
+        }
+    }
+}

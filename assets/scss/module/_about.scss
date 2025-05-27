@@ -1,0 +1,332 @@
+/*------------------------------------*\
+    #About
+\*------------------------------------*/
+.about {
+    padding-top   : 130px;
+    padding-bottom: 130px;
+
+    @media #{$maxTablet} {
+        padding-top   : 70px;
+        padding-bottom: 70px;
+    }
+
+    overflow: visible;
+
+    .about-img {
+        position : relative;
+        height   : 570px;
+        @media screen and(min-width:992px){
+            max-width: calc(100% - 40px);
+        }
+
+        @media #{$maxTablet} {
+            margin: 0 auto 40px;
+        }
+
+        .about-img-holder {
+            border-radius: 12px;
+        }
+
+        .counter {
+            min-width: 200px;
+            position : absolute;
+            top      : 70px;
+            left     : -40px;
+            z-index  : 2;
+
+            @media #{$maxSmall} {
+                left  : 0;
+                border-radius: 0 8px 8px 0;
+                align-items: center;
+            }
+        }
+    }
+
+    .prief-set {
+        p {
+            font-size    : 17px;
+            line-height  : 27px;
+            font-weight  : 700;
+            margin-bottom: 24px;
+        }
+    }
+
+    .signature-block {
+        display    : flex;
+        align-items: center;
+
+        @media #{$maxTablet} {
+            justify-content: center;
+        }
+
+        .signature-body {
+            position: relative;
+
+            img {
+                position: absolute;
+                top     : -18px;
+                left    : 2px;
+                right   : 0;
+
+                @media#{$maxSmall} {
+                    top      : 0;
+                    left     : -20px;
+                    max-width: 130%;
+                }
+            }
+
+            h6 {
+                font-family   : var(--global--font-heading);
+                font-weight   : 600;
+                font-style    : italic;
+                color         : var(--global--color-secondary);
+                font-size     : 19px;
+                line-height   : 29px;
+                text-transform: capitalize;
+                margin-bottom : 0;
+            }
+
+            p {
+                font-family   : var(--global--font-body);
+                font-weight   : 400;
+                color         : var(--global--color-primary);
+                font-size     : 14px;
+                line-height   : 26px;
+                text-transform: capitalize;
+                margin-bottom : 0;
+            }
+        }
+
+        .btn {
+            margin-right: 30px;
+            width       : 170px;
+            box-shadow  : 0px 3px 63px 0px rgba(40, 40, 40, 0.11);
+        }
+    }
+
+    .about-block {
+        @media #{$maxTablet} {
+            text-align: center;
+        }
+
+        .block-left {
+            @media #{$maxTablet} {
+                margin-bottom: 40px;
+            }
+
+            .paragraph {
+                font-size    : 17px;
+                line-height  : 27px;
+                color        : var(--global--color-secondary);
+                font-weight  : 500;
+                margin-bottom: 25px;
+            }
+
+            p {
+                font-size    : 16px;
+                line-height  : 27px;
+                margin-bottom: 32px;
+            }
+
+            .btn {
+                box-shadow: 0px 3px 63px 0px rgba(40, 40, 40, 0.11);
+            }
+        }
+    }
+
+    .about-wrapper {
+        @media #{$minLarge} {
+            display              : grid;
+            grid-template-columns: 40% 60%;
+            height               : 635px;
+        }
+
+        .about-block-wrapper {
+            position: relative;
+            z-index : 2;
+
+            .about-block {
+                background-color: var(--global--color-white);
+
+                @media #{$minLarge} {
+                    border-radius: 12px 0 0 0;
+                    position     : absolute;
+                    top          : 0;
+                    left         : 0px;
+                    padding-left : 60px;
+                    width        : calc(100% + 60px);
+                }
+
+                @media #{$minXlarge} {
+                    left        : 0px;
+                    padding-left: 120px;
+                    width       : calc(100% + 120px);
+                }
+
+                .heading {
+                    @media #{$maxTablet} {
+                        max-width: 90%;
+                        margin   : 0 auto;
+                    }
+
+                    @media #{$minLarge} {
+                        padding-right: var(--bs-gutter-x, .75rem);
+                        margin-right : auto;
+                        max-width    : calc(960px / 2);
+                    }
+
+                    @media #{$minXlarge} {
+                        max-width: calc(1140px / 2);
+                    }
+
+                    .heading-subtitle {
+                        background-color: var(--global--color-primary);
+                        color           : var(--global--color-white);
+                        border-radius   : 0 0 12px 12px;
+                        margin-bottom   : 55px;
+
+                        @media #{$maxTablet} {
+                            border-radius: 12px;
+                            margin-bottom: 40px;
+                        }
+                    }
+
+                    .heading-title {
+                        margin-bottom: 21px;
+                    }
+
+                    .heading-desc {
+                        margin-bottom: 32px;
+                    }
+
+                    .signature-block {
+                        margin-bottom: 63px;
+                    }
+
+                    .advantages-list-holder {
+                        padding         : 32px 40px 32px;
+                        background-color: #e0f6e9;
+                        border-radius   : 12px;
+
+                        @media #{$maxTablet} {
+                            padding-left : 30px;
+                            padding-right: 30px;
+                        }
+
+                        p {
+                            font-size    : 17px;
+                            font-weight  : 700;
+                            line-height  : 27px;
+                            color        : var(--global--color-secondary);
+                            margin-bottom: 0;
+
+                            @media #{$maxTablet} {
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .video-wrapper {
+            position: relative;
+            z-index : 1;
+
+            @media #{$maxTablet} {
+                max-width: 90%;
+                margin   : 0 auto 40px;
+            }
+
+            .video {
+                background-position-x: right;
+
+                @media #{$minLarge} {
+                    border-radius: 0 12px 12px 0;
+                    position     : absolute;
+                    top          : -110px;
+                    left         : 0px;
+                    width        : calc(100% + 60px);
+                    height       : calc(100% + 110px);
+                }
+
+                @media #{$minXlarge} {
+                    width: calc(100% + 120px);
+                }
+            }
+        }
+    }
+
+    &.about-2 {
+        padding-top   : 0px;
+        padding-bottom: 0;
+    }
+
+    &.about-3 {
+        padding-top   : 110px;
+        padding-bottom: 130px;
+
+        @media #{$maxTablet} {
+            padding-top   : 70px;
+            padding-bottom: 70px;
+        }
+
+        .about-block {
+            .block-left {
+
+                .paragraph,
+                p,
+                .signature-block {
+                    @media #{$minLarge} {
+                        padding-left: 50px;
+                    }
+
+                    @media #{$minXlarge} {
+                        padding-left: 95px;
+                    }
+                }
+
+                p {
+                    margin-bottom: 42px;
+                }
+
+                .paragraph {
+                    border-left  : 4px solid var(--global--color-primary);
+                    margin-bottom: 25px;
+
+                    @media #{$maxSmall} {
+                        padding-left: 15px;
+                    }
+                }
+
+                .signature-block {
+                    .signature-body {
+                        p {
+                            margin-bottom: 0;
+                            padding-left : 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .about-img {
+            .about-img-holder {
+                @media #{$maxTablet} {
+                    max-width: 370px;
+                }
+            }
+
+            .counter {
+                top             : auto;
+                bottom          : 0;
+                left            : 99px;
+                width           : max-content;
+                min-width       : 0;
+                border-radius   : 12px 0 12px 0;
+                transform-origin: bottom left;
+                transform       : rotate(270deg);
+            }
+        }
+    }
+}

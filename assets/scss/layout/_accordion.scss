@@ -1,0 +1,180 @@
+/*------------------------------------*\
+    #Accordion
+\*------------------------------------*/
+/* Accordion Base */
+
+.accordion {
+    border-top: 4px solid var(--global--color-primary);
+
+    .card,
+    .card:first-of-type,
+    .card:not(:first-of-type):not(:last-of-type) {
+        padding      : 23px 20px 22px 0px;
+        box-shadow   : none;
+        border       : 0;
+        border-bottom: 2px solid #eaeaea;
+        margin-bottom: 0px;
+        border-radius: 0px;
+        transition   : 0.3s ease-in-out;
+        text-align   : left;
+
+        &.active-acc {
+            .card-heading {
+                .card-link {
+                    &::before {
+                        color: var(--global--color-white);
+                    }
+                }
+            }
+        }
+
+        .card-heading {
+            padding: 0;
+
+            .card-link {
+                font-family   : var(--global--font-heading);
+                font-size     : 19px;
+                font-weight   : 700;
+                color         : var(--global--color-heading);
+                text-transform: capitalize;
+                position      : relative;
+                transition    : 0.3s ease-in-out;
+                display       : block;
+                padding-left  : 0;
+                display       : flex;
+                align-items   : center;
+
+                &:hover {
+                    color: var(--global--color-primary);
+                }
+
+                &::before {
+                    /* symbol for "opening" cards */
+                    content         : "\f054";
+                    flex-shrink     : 0;
+                    transition      : 0.3s ease-in-out;
+                    display         : flex;
+                    justify-content : center;
+                    align-items     : center;
+                    width           : 22px;
+                    height          : 22px;
+                    border-radius   : 50%;
+                    background-color: var(--global--color-heading);
+                    color           : var(--global--color-white);
+                    font-family     : "Font Awesome 5 Free";
+                    font-weight     : 700;
+                    font-size       : 11px;
+                    margin-right    : 20px;
+                    transform       : rotate(90deg);
+                }
+
+                &.collapsed {
+                    &::before {
+                        /* symbol for "collapsed" cards */
+                        background-color: var(--global--color-white);
+                        color           : var(--global--color-heading);
+                        transform       : rotate(0deg);
+                    }
+                }
+            }
+        }
+
+        .card-body {
+            font-family: var(--global--font-body);
+            color      : var(--global--color-body);
+            padding    : 16px 0 0 31px;
+            font-size  : 15px;
+            font-weight: 400;
+            line-height: 25px;
+        }
+    }
+
+    .card:last-of-type {
+        margin-bottom: 0px;
+    }
+
+    &.accordion-light {
+        border-color: var(--global--color-white);
+
+        .card,
+        .card:first-of-type,
+        .card:not(:first-of-type):not(:last-of-type) {
+            border-color    : #99dfb6;
+            background-color: transparent;
+
+            .card-heading {
+                .card-link {
+                    color: var(--global--color-white);
+
+                    &:hover {
+                        color: var(--global--color-heading);
+                    }
+                }
+            }
+
+            .card-body {
+                color: var(--global--color-gray);
+            }
+        }
+    }
+
+    &.accordion-2 {
+        border-top: 0;
+
+        .card,
+        .card:first-of-type,
+        .card:not(:first-of-type):not(:last-of-type) {
+            padding-left : 30px;
+            padding-right: 25px;
+            border       : 2px solid #eaeaea;
+            border-radius: 4px;
+
+            @media #{$maxSmall} {
+                padding-left : 15px;
+                padding-right: 15px;
+            }
+
+            &.active-acc {
+                border-color: var(--global--color-primary);
+
+                .card-heading {
+                    .card-link {
+                        color: var(--global--color-primary);
+                    }
+                }
+            }
+
+            .card-heading {
+                .card-link {
+                    font-size: 17px;
+
+                    &::before {
+                        position        : absolute;
+                        right           : 0;
+                        margin-right    : 0;
+                        content         : '\f077';
+                        transform       : rotate(180deg);
+                        background-color: var(--global--color-primary);
+                    }
+
+                    &.collapsed {
+                        &::before {
+                            background-color: var(--global--color-heading);
+                            color           : var(--global--color-white);
+                            transform       : rotate(0deg);
+                        }
+                    }
+                }
+            }
+
+            .card-body {
+                padding-top : 12px;
+                padding-left: 0;
+            }
+        }
+
+        .card:last-of-type {
+            margin-bottom: 30px;
+        }
+    }
+}

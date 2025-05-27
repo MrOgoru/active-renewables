@@ -1,0 +1,100 @@
+/*------------------------------------*\
+    #Tabs
+\*------------------------------------*/
+
+.tabs .tab-content>.tab-pane {
+    font-family: var(--global--font-body);
+    font-size  : 16px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.tabs-1 {
+
+    .nav-pills .nav-link.active,
+    .nav-pills .show>.nav-link {
+        color       : var(--global--color-primary);
+        border-color: var(--global--color-primary);
+    }
+
+    .nav-pills {
+        display        : flex;
+        width          : 100%;
+        justify-content: center;
+
+        .nav-link {
+            border-bottom   : 2px solid transparent;
+            background-color: transparent;
+            color           : var(--global--color-heading);
+            font-family     : var(--global--font-heading);
+            font-size       : 18px;
+            font-weight     : 700;
+            text-transform  : capitalize;
+            padding-top     : 0;
+            border-radius   : 0;
+            transition      : 0.3s ease-in-out;
+
+            &:hover {
+                color       : var(--global--color-primary);
+                border-color: var(--global--color-primary);
+            }
+        }
+    }
+}
+
+.tabs-2 {
+
+    .nav-pills .nav-link.active,
+    .nav-pills .show>.nav-link {
+        color: var(--global--color-primary);
+
+        i {
+            color           : var(--global--color-white);
+            background-color: var(--global--color-primary);
+        }
+
+        ;
+    }
+
+    .nav-pills {
+        display        : flex;
+        width          : 100%;
+        justify-content: center;
+
+        .nav-link {
+            border          : 0;
+            background-color: transparent;
+            color           : var(--global--color-heading);
+            font-family     : var(--global--font-heading);
+            font-size       : 18px;
+            font-weight     : 700;
+            text-transform  : capitalize;
+            padding-top     : 0;
+            border-radius   : 0;
+            transition      : 0.3s ease-in-out;
+
+            i {
+                display        : flex;
+                justify-content: center;
+                align-items    : center;
+                width          : 60px;
+                height         : 60px;
+                border         : 1px solid #e6e6e6;
+                border-radius  : 3px;
+                color          : var(--global--color-heading);
+                transition     : 0.3s ease-in-out;
+                font-size      : 25px;
+                margin-bottom  : 15px;
+            }
+
+            &:hover {
+                color: var(--global--color-primary);
+
+                i {
+                    color           : var(--global--color-white);
+                    background-color: var(--global--color-primary);
+                }
+            }
+        }
+    }
+}

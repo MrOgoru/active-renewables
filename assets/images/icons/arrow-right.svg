@@ -1,0 +1,5 @@
+svg( xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 8" width="11" height="8")
+	g(id="Header 01-2")
+		g(id="Contacts-2")
+			g(id="Stories-2")
+				path(id="Arrow " class="shp1" d="M11 4L7.01 0L7.01 3L0 3L0 5L7.01 5L7.01 8L11 4Z")

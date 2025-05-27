@@ -1,0 +1,39 @@
+/*------------------------------------*\
+    #Tables
+\*------------------------------------*/
+
+table {
+    background-color: var(--global--color-white);
+    border          : 1px solid #eee;
+    border-radius   : 0;
+    margin-bottom   : 0;
+
+    thead {
+        background-color: var(--global--color-gray);
+
+        tr {
+            th {
+                font-size          : 14px;
+                font-weight        : 600;
+                text-transform     : capitalize;
+                color              : var(--global--color-heading);
+                line-height        : 30px !important;
+                border-bottom-width: 0 !important;
+                border-color       : #eee;
+                padding            : 0;
+            }
+
+            td {
+                padding     : 20px;
+                border-color: #eee;
+            }
+        }
+    }
+
+    tbody {
+        font-size  : 13px;
+        font-weight: 600;
+        line-height: 26px;
+        color      : var(--global--color-body);
+    }
+}

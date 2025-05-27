@@ -1,0 +1,50 @@
+/*------------------------------------*\
+    #PAGINATION
+\*------------------------------------*/
+.pagination {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    margin         : 0;
+    border-radius  : 0;
+
+    li {
+        margin-right: 10px;
+        display     : inline-block;
+
+        a,
+        span {
+            display         : inline-flex;
+            justify-content : center;
+            align-items     : center;
+            background-color: var(--global--color-white);
+            color           : var(--global--color-heading);
+            font-family     : var(--global--font-body);
+            font-size       : 20px;
+            font-weight     : 700;
+            text-transform  : uppercase;
+            padding         : 0;
+            width           : 50px;
+            height          : 50px;
+            border-radius   : 4px;
+            border          : 2px solid #929ba2;
+            transition      : 300ms ease-in-out;
+
+            &:hover {
+                background-color: var(--global--color-heading);
+                color           : var(--global--color-white);
+                border-color    : var(--global--color-heading);
+            }
+
+            i {
+                font-size: 12px;
+            }
+
+            &.current {
+                background-color: var(--global--color-heading);
+                color           : var(--global--color-white);
+                border-color    : var(--global--color-heading);
+            }
+        }
+    }
+}

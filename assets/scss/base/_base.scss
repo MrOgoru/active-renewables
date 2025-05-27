@@ -1,0 +1,73 @@
+/*------------------------------------*\
+    #GLOBAL STYLES
+\*------------------------------------*/
+
+body,
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--global--color-white);
+    font-family     : var(--global--font-body);
+    font-size       : 14px;
+    font-weight     : 400;
+    color           : var(--global--color-body);
+    margin          : 0;
+}
+
+
+
+::selection {
+    background-color: var(--global--color-primary);
+    color           : var(--global--color-white);
+    text-shadow     : none;
+}
+
+a {
+    font-family    : var(--global--font-body);
+    font-weight    : 400;
+    color          : var(--global--color-primary);
+    transition     : all 300ms ease-in-out;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+p {
+    font-family: var(--global--font-body);
+    font-weight: 400;
+}
+
+textarea {
+    resize: none;
+}
+
+.fullscreen {
+    height: 100vh !important;
+}
+
+section {
+    background-color: var(--global--color-white);
+    padding         : 120px 0;
+    overflow        : hidden;
+
+    @media only screen and (max-width: 767px) {
+        padding: 70px 0;
+    }
+}
+
+hr {
+    background-color: #eaeaea;
+    border-color    : #eaeaea;
+    margin          : 0;
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+    .fullscreen {
+        height: auto !important;
+    }
+}

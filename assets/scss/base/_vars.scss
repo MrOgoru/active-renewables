@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    #CSS VARIBALES
+\*------------------------------------*/
+:root {
+    --global--color-primary   : #32c36c;
+    --global--color-primary-90: rgba(50, 195, 108, 0.9);
+    --global--color-primary-70: rgba(50, 195, 108, 0.7);
+    --global--color-heading   : #253745;
+    --global--color-secondary : #2b3e4b;
+    --global--color-body      : #9b9b9b;
+    --global--color-white     : #ffffff;
+    --global--color-white-90  : rgba(255, 255, 255, 0.9);
+    --global--color-gray      : #f9f9f9;
+    --global--font-body       : 'Roboto', sans-serif;
+    --global--font-heading    : 'IBM Plex Sans', sans-serif;
+    --global--font-secondary  : 'Heebo', sans-serif;
+}
+
+$line-height-base   : 1.5;
+$line-height-content: 1.8;
+$decoration-base    : none;
+
+$font-size-h1: 52px;
+$font-size-h2: 42px;
+$font-size-h3: 38px;
+$font-size-h4: 28px;
+$font-size-h5: 24px;
+$font-size-h6: 18px;
+
+$font-size-base: 14px;
+$baseline      : 20px;
+
+$fontawesome: "Font Awesome 5 Free";
+
+$maxSmall : "screen and (max-width:767.98px)";
+$minTablet: "screen and (min-width:768px)";
+$maxTablet: "screen and (max-width:991.98px)";
+$minLarge : "screen and (min-width:992px)";
+$maxLarge : "screen and (max-width:1199.98px)";
+$minXlarge: "screen and (min-width:1200px)";
+$noteBook : "(min-width:992px) and (max-width:1200px)";

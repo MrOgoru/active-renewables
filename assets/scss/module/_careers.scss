@@ -1,0 +1,97 @@
+/*------------------------------------*\
+    #Carrers
+\*------------------------------------*/
+.careers {
+    padding-top   : 130px;
+    padding-bottom: 220px;
+
+    @media #{$maxTablet} {
+        padding-top   : 70px;
+        padding-bottom: 180px;
+    }
+
+    .career-item {
+        @media #{$maxTablet} {
+            max-width: 370px;
+            margin   : 0 auto;
+        }
+
+        .career-item-wrap {
+            box-shadow      : 0px 5px 83px 0px rgba(40, 40, 40, 0.06);
+            border-radius   : 8px;
+            background-color: var(--global--color-white);
+            padding         : 39px 40px 40px;
+            position        : relative;
+
+            @media #{$noteBook} {
+                padding-right: 25px;
+                padding-left : 25px;
+            }
+
+            .career-meta {
+                display      : flex;
+                align-items  : center;
+                margin-bottom: 33px;
+
+                .career-type,
+                .career-place {
+                    font-size     : 13px;
+                    line-height   : 28px;
+                    font-family   : var(--global--font-body);
+                    font-weight   : 400;
+                    text-transform: capitalize;
+                    margin-bottom : 0;
+                }
+
+                .career-type {
+                    color        : var(--global--color-primary);
+                    border       : 2px solid var(--global--color-primary);
+                    padding      : 0px 9px;
+                    border-radius: 4px;
+                    margin-right : 15px;
+                }
+
+                .career-place {
+                    color: var(--global--color-body);
+                }
+            }
+
+            .career-content {
+                .career-title {
+                    font-family   : var(--global--font-heading);
+                    font-size     : 20px;
+                    font-weight   : 700;
+                    line-height   : 28px;
+                    color         : var(--global--color-heading);
+                    margin-bottom : 17px;
+                    text-transform: capitalize;
+                }
+
+                .career-desc {
+                    font-family  : var(--global--font-body);
+                    font-weight  : 400;
+                    font-size    : 15px;
+                    line-height  : 25px;
+                    color        : var(--global--color-body);
+                    margin-bottom: 32px;
+                }
+
+                .career-more {
+                    width  : 140px;
+                    height : 42px;
+                    padding: 0 20px;
+
+                    i {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    .carousel-dots {
+        .owl-dots {
+            margin-top: 40px;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+/*------------------------------------*\
+    #404
+\*------------------------------------*/
+.page-404 {
+	h3 {
+		font-size    : 280px;
+		font-weight  : 600;
+		line-height  : 1.1;
+		margin-bottom: 0;
+	}
+
+	p {
+		color        : #a5a5a5;
+		font-size    : 15px;
+		font-weight  : 400;
+		line-height  : 23px;
+		margin-bottom: 20px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.page-404 {
+		h3 {
+			font-size: 150px;
+		}
+
+		.btn {
+			width: 125px;
+		}
+	}
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+	.page-404 {
+		h3 {
+			font-size: 180px;
+		}
+	}
+}

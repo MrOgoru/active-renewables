@@ -1,0 +1,213 @@
+/*------------------------------------*\
+    #BACKGROUNDS
+\*------------------------------------*/
+
+.bg-theme {
+    background-color: var(--global--color-primary) !important;
+}
+
+.bg-theme2 {
+    background-color: var(--global--color-heading) !important;
+}
+
+.bg-gray {
+    background-color: var(--global--color-gray) !important;
+}
+
+.bg-grey {
+    background-color: #f6f7f8 !important;
+}
+
+.bg-dark-gray {
+    background-color: #3a3a3a;
+}
+
+.bg-dark {
+    background-color: #222222 !important;
+}
+
+
+.bg-secondary {
+    background-color: var(--global--color-secondary);
+}
+
+/* Background Image */
+
+.bg-section {
+    position           : relative;
+    overflow           : hidden;
+    z-index            : 1;
+    background-size    : cover;
+    background-repeat  : no-repeat;
+    background-position: center center;
+    width              : 100%;
+    height             : 100%;
+}
+
+.bg-parallax {
+    background-attachment: fixed;
+}
+
+.bg-overlay {
+    &:before {
+        content : "";
+        display : inline-block;
+        height  : 100%;
+        left    : 0;
+        position: absolute;
+        top     : 0;
+        width   : 100%;
+        z-index : -1;
+    }
+}
+
+.bg-overlay-light {
+    &:before {
+        background-color: var(--global--color-white);
+        opacity         : 0.8;
+    }
+}
+
+.bg-overlay-dark {
+    &:before {
+        background-color: rgba(29, 42, 77, 0.45)
+    }
+}
+
+.bg-overlay-dark-2 {
+    &:before {
+        background-image: linear-gradient(180deg, #1B1A1A80 0%, #00000000 100%);
+        opacity         : 0.55;
+    }
+}
+
+.bg-overlay-dark-3 {
+    &:before {
+        background-image: linear-gradient(180deg, #1B1A1A80 0%, #00000000 100%);
+    }
+}
+
+.bg-overlay-dark-slider {
+    &:before {
+        background-image: linear-gradient(180deg, #14191c 0%, rgba(20, 25, 28, 0) 82%);
+    }
+}
+
+.bg-overlay-dark-slider-2 {
+    &:before {
+        background-image: linear-gradient(180deg, #14191c 0%, rgba(20, 25, 28, 0) 82%);
+    }
+}
+
+.bg-overlay-theme {
+    &:before {
+        background-image: linear-gradient(180deg, #32C36CD9 0%, #32C36C 82%)
+    }
+}
+
+.bg-overlay-theme2 {
+    &:before {
+        background-image: linear-gradient(180deg, #253745 50%, #253745E6 100%);
+    }
+}
+
+.bg-overlay-theme3 {
+    &:before {
+        background-image: linear-gradient(180deg, #32C36CF2 0%, #32C36C 86%);
+    }
+}
+
+.bg-overlay-theme4 {
+    background-color: var(--global--color-heading);
+
+    &:before {
+        background-image: linear-gradient(180deg, #00000000 0%, #1F313F 70%);
+    }
+}
+
+.bg-overlay-theme5 {
+    &:before {
+        background-image: linear-gradient(180deg, #32c36c 46%, #32c36c5c 144%)
+    }
+}
+
+.bg-overlay-video {
+    &:before {
+        background-image: linear-gradient(180deg, #1D2A4D03 42%, #1D2A4D 90%);
+        opacity         : 0.8;
+    }
+}
+
+.bg-overlay-white {
+    &:before {
+        background-image: linear-gradient(180deg, #fff 50%, #ffffffd6 100%);
+    }
+}
+
+.bg-overlay-white2 {
+    &:before {
+        background-image: linear-gradient(0deg, #fff 34%, #ffffff00 44%);
+    }
+}
+
+.bg-overlay-white3 {
+    &:before {
+        background-image: linear-gradient(180deg, #00000000 0%, #F6F7F8 90%);
+    }
+}
+
+/* Background Video */
+.bg-video {
+    position: relative;
+
+    iframe {
+        position  : absolute;
+        top       : 0;
+        left      : 0;
+        right     : 0;
+        object-fit: cover;
+        width     : 100%;
+        height    : 100%;
+        transform : rotateZ(0);
+    }
+
+    h2 {
+        text-transform: capitalize;
+        position      : absolute;
+        top           : 50%;
+        left          : 50%;
+        transform     : translate(-50%);
+        z-index       : 5;
+    }
+}
+
+.no-shadow {
+    box-shadow: none !important;
+}
+
+.bg-animate {
+    background-size    : cover;
+    background-position: 0px 0px;
+    background-repeat  : repeat-x;
+    animation          : animatedBackground 30s linear infinite;
+}
+
+@-webkit-keyframes animatedBackground {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 100% 0;
+    }
+}
+
+@keyframes animatedBackground {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 100% 0;
+    }
+}

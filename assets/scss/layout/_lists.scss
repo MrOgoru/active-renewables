@@ -1,0 +1,105 @@
+/*------------------------------------*\
+    #Lists
+\*------------------------------------*/
+
+ul.list-icons {
+    padding        : 0;
+    font-size      : 14px;
+    list-style-type: none;
+
+    li {
+        font-family: var(--global--font-body);
+        color      : var(--global--color-body);
+        font-size  : 16px;
+        font-weight: 400;
+        line-height: 29px;
+        position   : relative;
+
+        i {
+            font-size   : 14px;
+            color       : var(--global--color-heading);
+            margin-right: 10px;
+        }
+    }
+}
+
+.advantages-list {
+    text-align: left;
+    margin    : 0;
+    padding   : 0;
+    list-style: none;
+
+    li {
+        display       : flex;
+        align-items   : center;
+        font-family   : var(--global--font-body);
+        font-weight   : 700;
+        font-size     : 15px;
+        line-height   : 36px;
+        color         : var(--global--color-body);
+        text-transform: capitalize;
+
+        @media #{$noteBook} {
+            font-size: 14px;
+        }
+
+        @media #{$maxTablet} {
+            display     : inline-flex;
+            margin-right: 20px;
+        }
+
+        @media #{$maxSmall} {
+            display     : flex;
+            margin-right: 0px;
+        }
+
+        &::before {
+            content         : '\f00c';
+            font-family     : $fontawesome;
+            font-weight     : 700;
+            width           : 20px;
+            height          : 20px;
+            display         : inline-flex;
+            justify-content : center;
+            align-items     : center;
+            background-color: var(--global--color-primary);
+            color           : var(--global--color-white);
+            margin-right    : 15px;
+            border-radius   : 50%;
+            font-size       : 10px;
+
+            @media #{$noteBook} {
+                margin-right: 8px;
+            }
+        }
+    }
+
+    &.advantages-list-2 {
+        li {
+            color: var(--global--color-white);
+
+            &::before {
+                background-color: var(--global--color-heading);
+            }
+        }
+    }
+
+    &.advantages-list-3 {
+        li {
+            &::before {
+                background-color: var(--global--color-heading);
+            }
+        }
+    }
+
+    &.advantages-list-white {
+        li {
+            color: var(--global--color-white);
+
+            &::before {
+                color           : var(--global--color-primary);
+                background-color: var(--global--color-white);
+            }
+        }
+    }
+}

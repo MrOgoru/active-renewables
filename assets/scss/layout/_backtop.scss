@@ -1,0 +1,64 @@
+/*------------------------------------*\
+    #BACK TO TOP
+\*------------------------------------*/
+
+#back-to-top {
+    position        : fixed;
+    right           : 0px;
+    bottom          : 0px;
+    opacity         : 0;
+    width           : 90px;
+    height          : 200px;
+    border-radius   : 4px 0 0 0;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    cursor          : pointer;
+    transition      : 300ms ease-in-out;
+    background-color: var(--global--color-primary);
+
+    &::before {
+        content         : '';
+        position        : absolute;
+        width           : calc(100%);
+        height          : calc(100%);
+        top             : 0px;
+        left            : 0px;
+        z-index         : -1;
+        transform       : scaleY(0);
+        transform-origin: top;
+        background-color: var(--global--color-heading);
+        transition      : transform .24s ease-in-out;
+    }
+
+    &:hover {
+        &::before {
+            transform       : scaleY(1);
+            transform-origin: bottom;
+        }
+    }
+
+    &.show {
+        z-index: 999;
+        opacity: 1;
+    }
+
+    i {
+        color      : var(--global--color-white);
+        font-weight: 700;
+        font-size  : 15px;
+    }
+
+    @media #{$maxTablet} {
+        width        : 50px;
+        height       : 50px;
+        border-radius: 50%;
+        bottom       : 30px;
+        right        : 20px;
+    }
+
+    @media #{$noteBook} {
+        width : 70px;
+        height: 150px;
+    }
+}
