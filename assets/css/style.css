@@ -782,7 +782,7 @@ blockquote .author {
 .bg-overlay-theme:before {
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#32C36CD9), color-stop(82%, #32C36C));
 	background-image: -o-linear-gradient(top, #32C36CD9 0%, #32C36C 82%);
-	background-image: linear-gradient(180deg, #32C36CD9 0%, #32C36C 82%);
+	background-image: linear-gradient(180deg, #32c36c4a 0%, #32c36cc4 82%);
 }
 
 .bg-overlay-theme2:before {
